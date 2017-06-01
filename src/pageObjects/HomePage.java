@@ -12,7 +12,7 @@ public class HomePage
 	public static WebElement click_login(WebDriver driver)
 	{
 		
-		loginLink = driver.findElement(By.className("login-container"));
+		element  = driver.findElement(By.className("login-container"));
 		
 		return element;
 		
