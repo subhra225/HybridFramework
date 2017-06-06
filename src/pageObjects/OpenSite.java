@@ -1,25 +1,29 @@
 package pageObjects;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 
 public class OpenSite {
 
-	private static String url= null;
+	private static String url= "https://qacashback.couponapitest.com";
 
 	public static String openUrl(WebDriver driver)
 	{
 		driver.get(url);
 		String title= driver.getTitle();
 		
-		if(title.equals("") )
+		
+		if(title.equals("CouponDunia: Coupons, Cashback, Offers and Promo Code") )
 
 		{
-			return "Url has been launched in the browser";
+			System.out.println("Url has been launched in the browser");
+			return "1";
 		}
 
 		else{
-			return "Could not launch the URL";
+			
+			System.out.println("Could not launch the URL");
+			return "0";
 		}
 	}
 
